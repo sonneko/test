@@ -1,21 +1,41 @@
+<!--ログイン機能のテストページ-->
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--文字コードと、検索された時の設定-->
+	<meta charset="utf-8">
+	<title>ログイン機能テスト用ページ</title>
+	<!--＊-検索したとき出る説明を設定-->
+	<meta content="ログインする">
+	
+	<!--cssを読み込み-->
+	<link rel="stylesheet" href="base.css">
+	
+	<!--モバイル対応にする-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!--ログイン用のJavaScriptを読み込み-->
+	<script src="login.js" charset="utf-8"></script>
+	
+	<!--svg処理用のライブラリを読み込み-->
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	
 </head>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<!--viewportを入れる-->
-<input type="text" size="40" value="https://" id="url_box">
-<div class="output"></div>
-<script>
-function inputChange(){
-	let url_input = document.getElementByld('url_box')
-	console.log(url_input.value)
-}
-</script>
-<p>iframeを使ってみた</p>
-<iframe src="https://catnose.me/learning/html/iframe"></iframe>
+<body>
+	<main>
+		<div id="login_page">
+			<div class="login_box">
+				<h1>ログインページ</h1>
+				<p>ユーザー名</p>
+				<input type="text" id="id_input" autofocus placeholder="UserName">
+				<p>パスワード</p>
+				<input type="text" id="pass_input" autofocus placeholder="Password">
+				<p id="login_result"></p>
+				<button id="login_btn">ログイン</button>
+				<p>アカウントをお持ちでない方は<a href="signup.html">ここからサインアップ</a></p>
+			</div>
+		</div>
+		<div class="my_page"></div>
+	</main>
+</body>
 </html>
